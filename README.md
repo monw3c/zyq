@@ -2,7 +2,7 @@
 一个关于中医知识文章小程序，后台基于Koa2和mongoose，爬虫抓取数据保存于mongodb
 
 
-#如何启动
+# 如何启动
 1. ./mongod 和 mongo 启动连接数据库，打开robomongo客户端
 2. npm start启动koa2
 3. 打开小程序开发中工具调试
@@ -23,14 +23,14 @@
 - [ ] 第二期新功能
 
 
-#一些不知是不是bug的问题
+# 一些不知是不是bug的问题
 1. 调用onPullDownRefresh时候，界面不要出现遮罩层（wx.showLoading之类），不然会抖动（不知是否是触发到层的关系）
 2. 体验上舒服，可以延迟一下回弹
 ```js
 setTimeout(function(){
     wx.stopPullDownRefresh()
 },1000)
-
+```
 
 
 # 您的鼓励是我持续开源的动力：）
