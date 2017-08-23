@@ -1,4 +1,4 @@
-# 中医圈
+# 中医圈(迟点开源)
 一个关于中医知识文章小程序，后台基于Koa2和mongoose，爬虫抓取数据保存于mongodb
 
 
@@ -16,10 +16,22 @@
 - [x] 后台接口
 - [x] 阅读历史
 - [x] 个人收藏
+- [x] 关于我们
 - [ ] 设置绑定
-- [ ] 正在移植功能到leancloud的存储
+- [ ] 正在移植到leancloud的存储
 - [ ] 小程序Https服务部署 可以参考 http://www.ifanr.com/minapp/779677 也可以用阿里云或第三方云的免费https
 - [ ] 第二期新功能
+
+
+#一些不知是不是bug的问题
+1. 调用onPullDownRefresh时候，界面不要出现遮罩层（wx.showLoading之类），不然会抖动（不知是否是触发到层的关系）
+2. 体验上舒服，可以延迟一下回弹
+```js
+setTimeout(function(){
+    wx.stopPullDownRefresh()
+},1000)
+
+
 
 # 您的鼓励是我持续开源的动力：）
 <img src="https://github.com/monw3c/angularjs_pingan/blob/master/images/3.pic.jpg" width="300">
