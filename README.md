@@ -32,6 +32,8 @@ setTimeout(function(){
 },1000)
 ```
 
+# 界面截图
+<img src="https://github.com/monw3c/zyq/blob/master/pic/4.pic.jpg" width="200"> <img src="https://github.com/monw3c/zyq/blob/master/pic/5.pic.jpg" width="200"> <img src="https://github.com/monw3c/zyq/blob/master/pic/6.pic.jpg" width="200">
 
 # 您的鼓励是我持续开源的动力：）
 <img src="https://github.com/monw3c/angularjs_pingan/blob/master/images/3.pic.jpg" width="300">
