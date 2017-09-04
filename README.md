@@ -16,7 +16,7 @@
 - [x] 后台接口
 - [x] 阅读历史
 - [x] 关于我们
-- [ ] 评论
+- [x] 评论
 - [ ] 个人收藏
 - [ ] 正在移植到leancloud的存储
 - [ ] 小程序Https服务部署 可以参考 http://www.ifanr.com/minapp/779677 也可以用阿里云或第三方云的免费https
@@ -33,7 +33,7 @@ setTimeout(function(){
 ```
 
 # 界面截图
-<img src="https://github.com/monw3c/zyq/blob/master/pic/4.pic.jpg" width="200"> <img src="https://github.com/monw3c/zyq/blob/master/pic/5.pic.jpg" width="200"> <img src="https://github.com/monw3c/zyq/blob/master/pic/6.pic.jpg" width="200">
+<img src="https://github.com/monw3c/zyq/blob/master/pic/4.pic.jpg" width="200"> <img src="https://github.com/monw3c/zyq/blob/master/pic/5.pic.jpg" width="200"> <img src="https://github.com/monw3c/zyq/blob/master/pic/6.pic.jpg" width="200"> <img src="https://github.com/monw3c/zyq/blob/master/pic/8.pic.jpg" width="200"> <img src="https://github.com/monw3c/zyq/blob/master/pic/7.pic.jpg" width="200">
 
 # 您的鼓励是我持续开源的动力：）
 <img src="https://github.com/monw3c/angularjs_pingan/blob/master/images/3.pic.jpg" width="300">
