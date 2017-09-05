@@ -31,6 +31,8 @@ setTimeout(function(){
     wx.stopPullDownRefresh()
 },1000)
 ```
+3. 小程序对个人申请的小程序审核还是比较严格，涉及个人小程序未允许内容：文娱-资讯，是没法上线的...
+
 
 # 界面截图
 <img src="https://github.com/monw3c/zyq/blob/master/pic/4.pic.jpg" width="200"> <img src="https://github.com/monw3c/zyq/blob/master/pic/5.pic.jpg" width="200"> <img src="https://github.com/monw3c/zyq/blob/master/pic/6.pic.jpg" width="200"> <img src="https://github.com/monw3c/zyq/blob/master/pic/8.pic.jpg" width="200"> <img src="https://github.com/monw3c/zyq/blob/master/pic/7.pic.jpg" width="200">
