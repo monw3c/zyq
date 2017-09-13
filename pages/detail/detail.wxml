@@ -1,0 +1,57 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="section__head">
+  </view>
+  <view class="section__content">
+      <view class="section__item" data-id="{{item.objectId}}">
+            <image class="section__item--image" src="{{item.image}}" mode="aspectFill" style="width: {{imagewidth}}px;" bindload="imageLoad" bindtap="clickImage">
+            </image>
+            <view class="section__item--mod">
+              <text class="section__item--title">{{item.title}}</text>
+              <view class="section__item--modsub">
+                <text class="section__item--origin">{{item.source}}</text>
+                <text class="section__item--time">{{item.date}}</text>
+                <!--<image wx:if="{{isfav==false}}" class="section__item--fav" src="../../images/like.png" mode="aspectFill" bindtap="isfav"></image>
+                <image wx:elif="{{isfav==true}}" src="../../images/like_s.png" class="section__item--fav"  mode="aspectFill" bindtap="nofav"></image>-->
+              </view>
+              <view wx:if="{{item.dec!=''}}">
+                <text class="section__item--dec">{{item.dec}}</text>
+                <view class="section__devider"></view>
+              </view>
+              <!--<text class="section__item--content">{{item.content}}</text>-->
+              <import src="../../wxParse/wxParse.wxml"/>
+              <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+            </view>
+            <view class="comment__mod" hidden="{{commentLen>0?false:true}}">
+                <text class="comment__title">最新评论({{commentLen}})</text>
+                <view class="comment__list">
+                   <view class="comment__li" wx:for="{{commentList}}" wx:for-item="item" data-id="{{item.commentId}}">
+                    <image class="comment__li--avater" src="{{item.avater}}" mode="aspectFill"></image>
+                    <block>
+                    <text class="comment__li--name">{{item.name}}</text>
+                    <text class="comment__li--date">{{item.date}}</text>
+                    </block>
+                    <text class="comment__li--content">{{item.content}}</text>
+                   </view>
+                </view>
+              </view>
+      </view>
+  </view>
+  <!--<view>
+    <loading wx:if="{{showLoading}}">加载中</loading>
+  </view>-->
+  <view class="comment__write" bindtap="commentTap">
+     <image class="comment__write--image" src="../../images/comment.png" mode="aspectFill"></image>
+  </view>
+  <view class="comment__box" hidden="{{boxHidden}}">
+    <textarea class="comment__box--text" placeholder="填写你的评论" placeholder-style="color:#aaa;font-size:28rpx;" focus="{{focus}}" value="{{textareaValue}}" bindinput="textareainput"/>
+    <view class="comment__box--btn"><b bindtap="boxCancel">取消</b><b bindtap="boxApply">确定</b></view>
+  </view>
+  <view class="comment__mask" hidden="{{boxHidden}}"></view>
+  <modal title="提示" confirm-text="确定" no-cancel  hidden="{{modalHidden}}" mask bindconfirm="closeModal">
+            {{modalMsg}}
+  </modal>
+  <!--<view class="back__layer" hidden="{{showBacklayer}}"></view>-->
+</view>
+
+

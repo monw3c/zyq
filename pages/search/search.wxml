@@ -1,0 +1,35 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="section__head">
+    <form class="search__form" >
+      <input value="{{searchValue}}" placeholder="文章关键字" class="search__input" bindfocus="focusSearch" bindinput="searchChangeinput"  name="teamSearchKeyWords" bindblur="searchSubmit" focus="true"/>
+      <view class="search__icon" style="width:40rpx;">
+        <icon type="search" size="12" color="#999" style="float:left;margin-right:20rpx;"></icon>
+      </view>
+    </form>
+  </view>
+  <view class="section__content {{bgfff==true?'bgfff':''}}">
+      <view class="section__item" wx:for="{{items}}" wx:for-item="item" bindtap="godetail" data-id="{{item.objectId}}">
+            <image class="section__item--image" src="{{item.image}}" mode="aspectFill" style="width: {{imagewidth}}px;" bindload="imageLoad">
+            </image>
+            <view class="section__item--mod">
+              <text class="section__item--title">{{item.title}}</text>
+              <!--<view class="section__item--mod">-->
+                <text class="section__item--origin">{{item.source}}</text>
+                <text class="section__item--time">{{item.date}}</text>
+              <!--</view>-->
+            </view>
+      </view>
+      <view class="nodata" hidden="{{noDataHidden}}" style="width:{{imagewidth-20}}px;">
+                            <image class="nodata__img" src="http://ac-yvjkjytn.clouddn.com/d9d66ba63955cc9ff6de.png"></image>
+                            <text class="nodata__text">没有搜索到内容</text>
+      </view>
+      <!--<view hidden="{{noDataHidden}}"><text>没有搜索到内容</text></view>-->
+  </view>
+  <!--<view>
+    <loading wx:if="{{showLoading}}">加载中</loading>
+  </view>-->
+  <modal title="提示" confirm-text="确定" no-cancel  hidden="{{modalHidden}}" mask bindconfirm="closeModal">
+            {{modalMsg}}
+  </modal>
+</view>

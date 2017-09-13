@@ -1,0 +1,77 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userFav">
+    <!--<text class="userFav__title">我的收藏 (<text class="userFav__count">1000</text>) </text>-->
+    <view class="tab">
+			<!-- 导航栏 -->
+            <view class="weui-navbar" style="width:{{imagewidth}}px">
+            <block wx:for-items="{{tabs}}">
+                <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                {{item}}
+                </view>
+            </block>
+            <!--<view class="weui-navbar__slider" style="transform: translateX({{sliderOffset}}px);"></view>-->
+            </view>
+            <!--<view class="rec" />-->
+            <swiper current="{{activeIndex}}" class="swiper-box" duration="300" bindchange="bindChange" style="height:{{windowHeight}}px">
+            <swiper-item>
+                <scroll-view class="scl" scroll-y bindscrolltolower="">
+                    <view class="article clearfix" data-id="{{fav.itemid}}" bindtap="onArticleClicked" wx:for="{{favdata}}" wx:for-item="fav" style="width:{{windowWidth-20}}px;">
+                            <view class="left">
+                                <view class="title">
+                                    {{fav.title}}
+                                </view>
+                                <!--<view class="subTitle">
+                                    546
+                                </view>-->
+                                <view class="cnt">
+                                    <text>{{fav.source}}</text>
+                                </view>
+                                <view class="date">
+                                    <text>{{fav.date}}</text>
+                                </view>
+                                
+                            </view>
+                            <view class="right">
+                                <image src="{{fav.image}}"/>
+                            </view>
+                    </view>
+                    <view class="nodata" hidden="{{flag ? true : false}}">
+                            <image class="nodata__img" src="http://ac-yvjkjytn.clouddn.com/d9d66ba63955cc9ff6de.png"></image>
+                            <text class="nodata__text">暂无收藏纪录</text>
+                    </view>
+                </scroll-view>
+            </swiper-item>
+            <swiper-item>
+                <scroll-view class="scl" scroll-y bindscrolltolower="">
+                    <view class="article clearfix" data-id="{{his.itemid}}" bindtap="onArticleClicked" wx:for="{{historydata}}" wx:for-item="his" style="width:{{windowWidth-20}}px;">
+                            <view class="left">
+                                <view class="title">
+                                    {{his.title}}
+                                </view>
+                                <!--<view class="subTitle">
+                                    546
+                                </view>-->
+                                <view class="cnt">
+                                    <text>{{his.source}}</text>
+                                </view>
+                                <view class="date">
+                                    <text>{{his.date}}</text>
+                                </view>
+                                
+                            </view>
+                            <view class="right">
+                                <image src="{{his.image}}"/>
+                            </view>
+                    </view>
+                    <view class="nodata" hidden="{{flag ? true : false}}">
+                            <image class="nodata__img" src="http://ac-yvjkjytn.clouddn.com/d9d66ba63955cc9ff6de.png"></image>
+                            <text class="nodata__text">暂无历史纪录</text>
+                    </view>
+                </scroll-view>
+            </swiper-item>
+            </swiper>
+		</view>
+  </view>
+  
+</view>

@@ -1,0 +1,37 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="section__head">
+    <form class="search__form" >
+      <input value="{{searchValue}}" placeholder="文章关键字" class="search__input" />
+      <view class="search__icon" style="width:40rpx;">
+        <icon type="search" size="12" color="#999" style="float:left;margin-right:20rpx;"></icon>
+      </view>
+      <view class="search__form--wrap" bindtap="focusSearch"></view>
+    <!--<button bindtap="searchSubmit" style="position:absolute;right:15rpx;top:10rpx;z-index:3;">
+      <icon type="clear" size="19" color="#aaa" ></icon>
+    </button>-->
+    </form>
+  </view>
+  <!--<scroll-view class="section__content" style="height: {{windowHeight-38}}px;"
+  scroll-y="true" bindscrolltolower="pullUpLoad" bindscrolltoupper="pullDownLoad">-->
+  <view class="section__content">
+      <view class="section__item" wx:for="{{items}}" wx:for-item="item" bindtap="godetail" data-id="{{item.objectId}}">
+            <image class="section__item--image" src="{{item.image}}" mode="aspectFill" style="width: {{imagewidth}}px;" bindload="imageLoad">
+            </image>
+            <view class="section__item--mod">
+              <text class="section__item--title">{{item.title}}</text>
+              <!--<view class="section__item--mod">-->
+                <text class="section__item--origin">{{item.source}}</text>
+                <text class="section__item--time">{{item.date}}</text>
+              <!--</view>-->
+            </view>
+      </view>
+  <!--</scroll-view>   -->
+  </view>
+  <!--<view>
+    <loading wx:if="{{showLoading}}">加载中</loading>
+  </view>-->
+  <modal title="提示" confirm-text="确定" no-cancel  hidden="{{modalHidden}}" mask bindconfirm="closeModal">
+            {{modalMsg}}
+  </modal>
+</view>

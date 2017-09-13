@@ -1,0 +1,26 @@
+.about__logo{
+  width:70px;
+  height:80px;
+  display:block;
+  margin:30px auto;
+
+}
+
+.about__title{
+  width:120px;
+  display:block;
+  margin:30px auto;
+  text-align: center;
+}
+
+.about__dec{
+  height:80px;
+  display:block;
+  margin:30px 5% 0;
+}
+
+.about__btn{
+  width:120px;
+  display:block;
+  
+}

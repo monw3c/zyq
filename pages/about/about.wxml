@@ -1,0 +1,10 @@
+<!--index.wxml-->
+<view class="container">
+  <view>
+    <image src="../../images/logo.png" mode="aspectFill" class="about__logo"></image>
+    <text class="about__title">中医圈小程序</text>
+    <text class="about__dec">中医圈是一款中医爱好者的移动知识产品，给中医爱好者提供优质的中医知识，中医案例，中医产品推荐。</text>
+    <button class="about__btn" open-type="share">推荐给朋友</button>
+    <image src="http://ac-yvjkjytn.clouddn.com/fcde10daec929b188214.jpg" mode="aspectFill" class="about__logo" style="width:300px;height:400px" bindtap="pay"></image>
+  </view> 
+</view>

@@ -1,0 +1,273 @@
+/**index.wxss**/
+@import "../../wxParse/wxParse.wxss";
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+/*.usermotto {
+  margin-top: 200px;
+}*/
+
+.flex-wrp{
+    height: 100px;
+    display:flex;
+    background-color: #FFFFFF;
+}
+
+.flex-item{
+  width: 100px;
+  background-color: #ddd;
+}
+
+.section__content{
+  background-color: #ddd;
+}
+.section__item{
+  flex-direction:column;
+  overflow: hidden;
+  background:#fff;
+}
+
+.section__item--mod{
+  
+  padding: 0 5px;
+  
+}
+.section__item--modsub{
+  position: relative;
+  height:30px;
+  line-height:30px;
+
+}
+.section__item--image{
+  width: 100vh;
+  height: 180px;
+  align-items: center;
+  position: relative;
+}
+.section__item--title{
+  font-size: 22px;
+  color: #000;
+  margin:15px 2%;
+  width: 96%;
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  line-height: 28px;
+}
+.section__item--fav{
+  width:22px;
+  height:22px;
+  float:right;
+  position:absolute;
+  right:10px;
+  top:4px;
+
+}
+
+.section__item--content{
+  /*border-top:1px solid #efefef; */
+  font-size: 18px;
+  color: #555;
+  margin:15px 0;
+  padding:10px;
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  line-height:26px;
+}
+.section__item--origin{
+  font-size: 12px;
+  color: #999;
+  margin: 0 10px 0 2%;
+  padding: 1px 3px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.section__item--time{
+  font-size: 12px;
+  color: #999;
+}
+
+.section__item--dec{
+    display:block;
+    width:70%;
+    margin:20px auto;
+    color:#aaa;
+    font-size:32rpx;
+    line-height:26px;
+    text-align:center;
+    max-height: 75px;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:3;
+}
+
+.section__devider{
+  width: 30%;
+  height: 2px;
+  background: #eee;
+  margin: 5px auto;
+}
+
+.back__layer{
+  position:fixed;
+  width:100%;
+  height:100%;
+  top: 0;
+  left: 0;
+  background:rgba(0,0,0,0.4);
+} 
+
+
+.wxParse-view{
+    font-size:18px;
+    color:#555;
+    padding:5px 10px;
+    display:block;
+    flex-direction:column;
+    align-items:center;
+    line-height:26px;
+}
+
+.wxParse-view{
+    margin-top:15px;
+    padding:0 10px;
+
+}
+
+.comment__write{
+   position: fixed;
+   bottom: 80px;
+   right: 10px;
+   border-radius: 30px;
+   background: #fff;
+   text-align: center;
+   width: 40px;
+   height: 40px;
+   box-shadow:0px 0px 3px #999;
+   line-height:58px;
+   overflow:hidden;
+}
+.comment__write--image{
+   width: 52rpx;
+   height: 52rpx;
+   
+}
+
+.comment__box{
+   width:90%;
+   height:205px;
+   position:fixed;
+   top:20px;
+   left:5%;
+   border-radius:10px;
+   background:#fff;
+   z-index: 2;
+}
+
+.comment__box--text{
+   border:1px solid #eee;
+    width:90%;
+    height:120px;
+    margin:15px auto;
+    padding:5px;
+    color:#666;
+    font-size:32rpx;
+}
+
+.comment__mask{
+   width:100%;
+   height:100%;
+   position:fixed;
+   top:0;
+   left:0;
+   background:rgba(0, 0, 0, .7);
+   z-index: 1;
+}
+
+.comment__box--btn{
+   display: flex;
+   height: 40px;
+   line-height: 40px;
+   border-top:1px solid #eee;
+}
+
+.comment__box--btn b{
+   flex: 1;
+   line-height: 40px;
+   color: #666;
+   font-size: 32rpx;
+   font-weight: normal;
+   text-align: center;
+}
+
+.comment__box--btn b:last-child{
+   border-left:1px solid #eee;
+   color: #d29f2d;
+}
+
+.comment__mod{
+   border-top:1px solid #eee;
+   margin:15px 0;
+   padding:10px 15px;
+}
+
+.comment__title{
+   font-size: 26rpx;
+   color: #666;
+   margin: 10px 0;
+   display:block;
+
+}
+
+.comment__li{
+   margin: 10px 0 20px;
+}
+
+.comment__li--avater{
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  float:left;
+}
+
+.comment__li--name{
+  font-size: 30rpx;
+  color: #999;
+  height:30px;
+  line-height:30px;
+  float:left;
+  margin-left: 10px;
+}
+
+.comment__li--date{
+  font-size: 30rpx;
+  color: #999;
+  height:30px;
+  line-height:30px;
+  float:right;
+}
+
+.comment__li--content{
+  display: block;
+  font-size: 30rpx;
+  color: #666;
+  margin: 35px 0 0 40px;
+}
