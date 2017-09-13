@@ -3,10 +3,11 @@
 
 
 # 如何启动
-<del>1. ./mongod 和 mongo 启动连接数据库，打开robomongo客户端</del>  
-<del>2. npm start启动koa2</del>  
 1. 打开app.js配置id
-2. 打开小程序开发中工具调试
+2. 打开小程序开发中工具调试  
+
+<del>1. ./mongod 和 mongo 启动连接数据库，打开robomongo客户端</del>  
+<del>2. npm start启动koa2</del>
 
 
 # TODO
