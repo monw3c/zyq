@@ -1,11 +1,12 @@
-# 中医圈(迟点开源)
-一个关于中医知识文章小程序，后台基于Koa2和mongoose，爬虫抓取数据保存于mongodb
+# 中医圈
+一个关于中医知识文章小程序，后台已移植到leancloud，爬虫数据和后台不方便开放<del>(后台基于Koa2和mongoose，爬虫抓取数据保存于mongodb)</del>
 
 
 # 如何启动
-1. ./mongod 和 mongo 启动连接数据库，打开robomongo客户端
-2. npm start启动koa2
-3. 打开小程序开发中工具调试
+<del>1. ./mongod 和 mongo 启动连接数据库，打开robomongo客户端</del>  
+<del>2. npm start启动koa2</del>  
+1. 打开app.js配置id
+2. 打开小程序开发中工具调试
 
 
 # TODO
@@ -18,7 +19,6 @@
 - [x] 关于我们
 - [x] 评论
 - [ ] 个人收藏
-- [ ] 正在移植到leancloud的存储
 - [ ] 小程序Https服务部署 可以参考 http://www.ifanr.com/minapp/779677 也可以用阿里云或第三方云的免费https
 - [ ] 第二期新功能
 
